@@ -1,0 +1,17 @@
+reporter:
+    outputs:
+        stylish: {}        # nice looking CLI reports
+        log:              # use a logger
+            json: true      # enable JSON logging
+            file: out.json  # put output in a file
+
+projects:
+    sample:
+        project:
+            name: sample
+        input:
+            - local: src
+              name: sources
+        rules:
+            roots:
+            - rules

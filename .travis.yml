@@ -1,0 +1,6 @@
+language: ruby
+install:
+    - curl -L spectralops.io/get | sudo sh
+    - spectral --version
+script:
+    - spectral run
