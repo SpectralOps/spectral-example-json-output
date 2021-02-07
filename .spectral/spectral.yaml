@@ -1,16 +1,20 @@
 reporter:
     outputs:
         stylish: {}        # nice looking CLI reports
-        log:              # use a logger
-            json: true      # enable JSON logging
-            file: out.json  # put output in a file
+        log:               # use a logger
+            json: true     # enable JSON logging
+            file: out.json # put output in a file
+
+match_ignores:
+    ignores:
+    - path: ".*/.spectral/"
 
 projects:
     sample:
         project:
             name: sample
         input:
-            - local: src
+            - local: .
               name: sources
         rules:
             roots:
